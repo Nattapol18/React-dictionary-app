@@ -1,0 +1,80 @@
+/* ใช้ฟอนต์ที่เหมาะสมสำหรับสไตล์ทางการ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9; /* ใช้สีที่เป็นกลางและเป็นทางการ */
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Roboto', sans-serif; /* ใช้ฟอนต์ที่ดูสะอาดตาและเป็นทางการ */
+  color: #333333; /* ใช้สีเข้มที่ดูเป็นทางการ */
+  padding: 1em;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333333; /* ใช้สีเข้มที่ดูทางการ */
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: #333333;
+  font-weight: 600;
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* ใช้ขอบที่เบาและเป็นทางการ */
+  margin: 10px 0;
+}
+
+.searchBox > button {
+  background-color: #007BFF; /* ใช้สีที่ดูทางการ เช่น สีน้ำเงิน */
+  height: 40px;
+  width: 60px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.searchBox > button:hover {
+  background-color: #0056b3; /* เปลี่ยนสีเมื่อโฮเวอร์ */
+}
+
+.showResults {
+  width: 500px;
+  padding: 20px;
+  background-color: white; /* ทำให้ผลลัพธ์ดูสะอาดตา */
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูเป็นทางการ */
+}
+
+.showResults > h2 > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.showResults p {
+  font-size: 16px;
+  color: #555555;
+}
