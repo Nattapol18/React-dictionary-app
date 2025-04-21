@@ -1,80 +1,256 @@
-/* ใช้ฟอนต์ที่เหมาะสมสำหรับสไตล์ทางการ */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* Modern Professional UI Styles - Enhanced Version */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
 
 .App {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f9; /* ใช้สีที่เป็นกลางและเป็นทางการ */
-  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  font-family: 'Inter', sans-serif;
+  padding: 2rem 1rem;
 }
 
+/* Typography */
 h1 {
   text-align: center;
-  font-size: 2.5em;
-  font-family: 'Roboto', sans-serif; /* ใช้ฟอนต์ที่ดูสะอาดตาและเป็นทางการ */
-  color: #333333; /* ใช้สีเข้มที่ดูเป็นทางการ */
-  padding: 1em;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  padding: 1.5rem 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #007BFF, #00c6ff);
+  border-radius: 2px;
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #333333; /* ใช้สีเข้มที่ดูทางการ */
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 h4 {
-  color: #333333;
+  color: #2c3e50;
   font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
 }
 
+/* Form Elements */
 input {
-  width: 400px;
-  height: 40px;
-  font-size: 18px;
-  padding-left: 12px;
-  border-radius: 5px;
-  border: 1px solid #ccc; /* ใช้ขอบที่เบาและเป็นทางการ */
-  margin: 10px 0;
+  width: 100%;
+  max-width: 400px;
+  height: 52px;
+  font-size: 1rem;
+  padding: 0 1.25rem;
+  border-radius: 10px;
+  border: 2px solid #e1e4e8;
+  background-color: white;
+  transition: all 0.3s ease;
+  margin: 0.75rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+input:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Search Box */
+.searchBox {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 480px;
+  margin: 1.5rem 0;
 }
 
 .searchBox > button {
-  background-color: #007BFF; /* ใช้สีที่ดูทางการ เช่น สีน้ำเงิน */
-  height: 40px;
-  width: 60px;
+  background: linear-gradient(to right, #007BFF, #00c6ff);
+  height: 52px;
+  min-width: 60px;
+  padding: 0 1.25rem;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.25);
 }
 
 .searchBox > button:hover {
-  background-color: #0056b3; /* เปลี่ยนสีเมื่อโฮเวอร์ */
+  background: linear-gradient(to right, #0056b3, #0096c7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 123, 255, 0.3);
 }
 
+.searchBox > button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+/* Results Container */
 .showResults {
-  width: 500px;
-  padding: 20px;
-  background-color: white; /* ทำให้ผลลัพธ์ดูสะอาดตา */
-  border-radius: 10px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูเป็นทางการ */
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  margin-top: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.showResults:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 
+              0 10px 15px -5px rgba(0, 0, 0, 0.07);
+}
+
+.showResults > h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #edf2f7;
+  margin-bottom: 1.25rem;
 }
 
 .showResults > h2 > button {
   background: none;
   border: none;
   cursor: pointer;
+  color: #6b7280;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.showResults > h2 > button:hover {
+  background-color: #f3f4f6;
+  color: #4a5568;
+  transform: rotate(90deg);
 }
 
 .showResults p {
-  font-size: 16px;
-  color: #555555;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin: 1rem 0;
+}
+
+/* Card-style elements */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #edf2f7;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated elements */
+.animated-element {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .App {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .showResults {
+    padding: 1.25rem;
+  }
+  
+  input {
+    font-size: 16px; /* Prevents zoom on mobile */
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .App {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+  }
+  
+  h1 {
+    color: #f7fafc;
+  }
+  
+  h2, h4 {
+    color: #e2e8f0;
+  }
+  
+  .showResults, .card {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .showResults p {
+    color: #cbd5e0;
+  }
+  
+  input {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  input:focus {
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+  }
 }

@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Advanced Dictionary</h1>
+      <h1>React Dictionary</h1>
       <div className="searchBox">
         <input
           type="text"
